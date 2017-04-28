@@ -5,7 +5,7 @@ package main
 // 		go run client.go
 
 import (
-	"github.com/toorop/go-pusher"
+	"github.com/marccampbell/go-pusher"
 	"log"
 )
 
@@ -18,7 +18,7 @@ func main() {
 	log.Println("init...")
 	pusherClient, err := pusher.NewClient(APP_KEY)
 	// if you need to connect to custom endpoint
-	pusherClient, err := pusher.NewCustomClient(APP_KEY, "localhost:8080", "ws")
+	pusherClient, err := pusher.NewCustomClient(APP_KEY, "localhost:8080", "ws", "")
 	if err != nil {
 		log.Fatalln(err)
 	}
